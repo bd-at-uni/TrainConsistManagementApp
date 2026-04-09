@@ -4,16 +4,18 @@ public class TrainConsistApp {
 
     public static void main(String[] args) {
 
-        System.out.println("=== UC5: Preserve Insertion Order ===");
+        System.out.println("=== UC6: Map Bogie to Capacity ===");
 
-        Set<String> formation = new LinkedHashSet<>();
+        Map<String, Integer> capacityMap = new HashMap<>();
 
-        formation.add("Engine");
-        formation.add("Sleeper");
-        formation.add("Cargo");
-        formation.add("Guard");
-        formation.add("Sleeper"); // duplicate
+        // Add bogies with capacity
+        capacityMap.put("Sleeper", 72);
+        capacityMap.put("AC Chair", 60);
+        capacityMap.put("First Class", 24);
 
-        System.out.println("Train Formation: " + formation);
+        // Iterate and display
+        for (Map.Entry<String, Integer> entry : capacityMap.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
     }
 }
