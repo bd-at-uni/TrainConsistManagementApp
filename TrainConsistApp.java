@@ -4,18 +4,24 @@ public class TrainConsistApp {
 
     public static void main(String[] args) {
 
-        System.out.println("=== UC3: Track Unique Bogie IDs ===");
+        System.out.println("=== UC4: Maintain Ordered Bogies ===");
 
-        Set<String> bogies = new HashSet<>();
+        LinkedList<String> train = new LinkedList<>();
 
-        // Add bogie IDs (with duplicates)
-        bogies.add("BG101");
-        bogies.add("BG102");
-        bogies.add("BG103");
-        bogies.add("BG104");
-        bogies.add("BG101"); // duplicate
-        bogies.add("BG102"); // duplicate
+        // Add bogies
+        train.add("Engine");
+        train.add("Sleeper");
+        train.add("AC");
+        train.add("Cargo");
+        train.add("Guard");
 
-        System.out.println("Unique Bogie IDs: " + bogies);
+        // Insert at position
+        train.add(2, "Pantry");
+
+        // Remove first and last
+        train.removeFirst();
+        train.removeLast();
+
+        System.out.println("Final Train Consist: " + train);
     }
 }
