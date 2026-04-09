@@ -4,24 +4,18 @@ public class TrainConsistApp {
 
     public static void main(String[] args) {
 
-        System.out.println("=== UC2: Add Passenger Bogies ===");
+        System.out.println("=== UC3: Track Unique Bogie IDs ===");
 
-        List<String> passengerBogies = new ArrayList<>();
+        Set<String> bogies = new HashSet<>();
 
-        // Add bogies
-        passengerBogies.add("Sleeper");
-        passengerBogies.add("AC Chair");
-        passengerBogies.add("First Class");
+        // Add bogie IDs (with duplicates)
+        bogies.add("BG101");
+        bogies.add("BG102");
+        bogies.add("BG103");
+        bogies.add("BG104");
+        bogies.add("BG101"); // duplicate
+        bogies.add("BG102"); // duplicate
 
-        System.out.println("After Adding: " + passengerBogies);
-
-        // Remove one bogie
-        passengerBogies.remove("AC Chair");
-        System.out.println("After Removing AC Chair: " + passengerBogies);
-
-        // Check existence
-        System.out.println("Contains Sleeper? " + passengerBogies.contains("Sleeper"));
-
-        System.out.println("Final List: " + passengerBogies);
+        System.out.println("Unique Bogie IDs: " + bogies);
     }
 }
