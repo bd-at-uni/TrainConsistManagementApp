@@ -4,24 +4,16 @@ public class TrainConsistApp {
 
     public static void main(String[] args) {
 
-        System.out.println("=== UC4: Maintain Ordered Bogies ===");
+        System.out.println("=== UC5: Preserve Insertion Order ===");
 
-        LinkedList<String> train = new LinkedList<>();
+        Set<String> formation = new LinkedHashSet<>();
 
-        // Add bogies
-        train.add("Engine");
-        train.add("Sleeper");
-        train.add("AC");
-        train.add("Cargo");
-        train.add("Guard");
+        formation.add("Engine");
+        formation.add("Sleeper");
+        formation.add("Cargo");
+        formation.add("Guard");
+        formation.add("Sleeper"); // duplicate
 
-        // Insert at position
-        train.add(2, "Pantry");
-
-        // Remove first and last
-        train.removeFirst();
-        train.removeLast();
-
-        System.out.println("Final Train Consist: " + train);
+        System.out.println("Train Formation: " + formation);
     }
 }
